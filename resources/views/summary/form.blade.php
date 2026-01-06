@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h2>Summarize Text with ChatGPT</h2>
-    <form method="POST" action="/summary">
+    <h2>{{ $title ?? 'Summarize Text' }}</h2>
+    <form method="POST" action="{{ $action ?? '/summary/openai' }}">
         @csrf
         <div class="form-group">
             <label for="user_content">Enter your text:</label>
